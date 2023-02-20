@@ -28,19 +28,19 @@ def find_mismatch(text):
 
 def main():
     # Printing answer, write your code here
-    file1 = input()
-    if "F" in file1:
-        file1 = input("File name: ")
-        with open(file1, "r", encoding="latin1") as file1:
-            file2=file1.read()
-        mismatch = find_mismatch(file2)
+    file = input()
+    if "F" in file:
+        file = input()
+        with open(file, "r", encoding="ISO-8859-1") as file:
+            read=file.read()
+        mismatch = find_mismatch(read)
         if mismatch == "Success":
             print("Success")
         else:
             print(mismatch)
-    elif "I" in file1:
-        file2 = input()
-        mismatch = find_mismatch(file2)
+    elif "I" in file:
+        text = input()
+        mismatch = find_mismatch(text)
         if mismatch == "Success":
             print("Success")
         else:
