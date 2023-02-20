@@ -27,9 +27,25 @@ def find_mismatch(text):
 
 
 def main():
-    text = input()
-    mismatch = find_mismatch(text)
     # Printing answer, write your code here
-    print(mismatch)
+    file = input()
+    if "F" in file:
+        file = input("File name: ")
+        with open(file, "r", encoding="latin1") as file:
+            text=file.read()
+        mismatch = find_mismatch(text)
+        if mismatch == "Success":
+            print("Success")
+        else:
+            print(mismatch)
+    elif "I" in file:
+        text = input()
+        mismatch = find_mismatch(text)
+        if mismatch == "Success":
+            print("Success")
+        else:
+            print(mismatch)
+    else:
+        print(mismatch)
 
 main()
