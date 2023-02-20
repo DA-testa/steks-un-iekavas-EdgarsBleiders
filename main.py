@@ -46,6 +46,7 @@ def main():
         else:
             print(mismatch)
     else:
+        mismatch = find_mismatch(file)
         print(mismatch)
 
 main()
